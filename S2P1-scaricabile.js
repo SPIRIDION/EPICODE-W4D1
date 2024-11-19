@@ -4,7 +4,12 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA 1
+  _ Chiedo allo user il primo numero.
+  _ Chiedo allo user il secondo numero.
+  _ Confronto i 2 numeri.
+  _ Restituisco allo user il più grande tra i due numeri.
+*/
 
 /*
 ESERCIZIO 2
@@ -17,7 +22,21 @@ ESERCIZIO 2
   num >= 20 - mostra in console "Huge"
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA 2 */
+
+let userNumber = parseInt(prompt("Inserisci un numero..."))
+
+if (userNumber < 5) {
+  console.log("Tiny")
+} else if (userNumber >= 5 && userNumber < 10) {
+  console.log("Small")
+} else if (userNumber >= 10 && userNumber < 15) {
+  console.log("Medium")
+} else if (userNumber >= 15 && userNumber < 20) {
+  console.log("Large")
+} else if (userNumber >= 20) {
+  console.log("Huge")
+}
 
 //ESERCIZI SUI CICLI: 
 
