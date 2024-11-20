@@ -4,12 +4,18 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* RISPOSTA 1
-  _ Chiedo allo user il primo numero.
-  _ Chiedo allo user il secondo numero.
-  _ Confronto i 2 numeri.
-  _ Restituisco allo user il più grande tra i due numeri.
-*/
+/* RISPOSTA 1 */
+
+let userNumer1 = parseInt(prompt("Inserisci il primo numero"))
+let userNumber2 = parseInt(prompt("Inserisci il secondo numero"))
+
+if (userNumer1 > userNumber2) {
+  console.log("Il primo numero fornito: " + userNumer1 + " è il più grande dei 2")
+} else if (userNumber2 > userNumer1) {
+  console.log("Il secondo numero fornito: " + userNumber2 + " è il più grande dei 2")
+} else if (userNumer1 === userNumber2) {
+  console.log("I due numero forniti sono uguali")
+}
 
 /*
 ESERCIZIO 2
@@ -36,6 +42,8 @@ if (userNumber < 5) {
   console.log("Large")
 } else if (userNumber >= 20) {
   console.log("Huge")
+} else {
+  console.log("Valore non valido")
 }
 
 //ESERCIZI SUI CICLI: 
@@ -44,13 +52,28 @@ if (userNumber < 5) {
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8 (suggerimento: ripassa l'uso di "continue").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA 3 */
 
-/* ESERCIZIO 11
-  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, e mostrare il risultato in console.
+for (let i = 10; i >= 0; i--) {
+  if (i === 3 || i === 8) {
+    continue
+  }
+  console.log(i)
+}
+
+/* ESERCIZIO 4
+  Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA 4*/
+
+for (let i = 0; i <= 15; i++) {
+  if ((i % 2) === 0) {
+    console.log("Il valore di i é " + i + " quindi pari.")
+  } else if ((i % 2) !== 0) {
+    console.log("Il valore di i é " + i + " quindi dispari")
+  }
+}
 
 //ESERCIZI EXTRA NON OBBLIGATORI
 
@@ -58,7 +81,16 @@ if (userNumber < 5) {
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA EXTRA 1 */
+
+let numberUno = parseInt(prompt("Inserisci il primo numero: "))
+let numberDue = parseInt(prompt("Inserisci il secondo numero: "))
+
+if (numberUno === 8 || numberDue === 8 || (numberDue + numberUno) === 8 || (numberUno - numberDue) === 8 || (numberDue - numberUno) === 8) {
+  console.log("Il risultato è 8")
+} else {
+  console.log("Il risultato non è 8")
+}
 
 /* ESERCIZIO EXTRA 2
 Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -66,7 +98,17 @@ C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha d
 Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* RISPOSTA EXTRA 2 */
+
+let totalShoppingCart = parseInt(prompt("Inserire il totale del carrello"))
+
+if (totalShoppingCart >= 50) {
+  console.log("Hai speso più di 50 euro e hai diritto alla spedizione gratis, il totale é: " + totalShoppingCart)
+} else if (totalShoppingCart < 50) {
+  console.log("Purtroppo il tuo carrello non supera i 50 euro, per cui la spedizione non sarà gratuita, il nuovo totale è: " + (totalShoppingCart + 10))
+} else {
+  console.log("Valore inserito non valido")
+}
 
 /* ESERCIZIO EXTRA 3
   Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
